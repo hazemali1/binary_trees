@@ -9,18 +9,18 @@
 */
 int binary_tree_balance(const binary_tree_t *tree)
 {
-        int s = 0, d = 0;
+	int s = 0, d = 0;
 
-        if (tree)
-        {
-                if (tree->left)
-                {
-                        s = 1 + binary_tree_balance(tree->left);
-                }
-                if (tree->right)
-                {
-                        d = 1 + binary_tree_balance(tree->right);
-                }
-        }
-        return (s - d);
+	if (tree)
+	{
+		if (tree->left)
+		{
+			s = 1 + binary_tree_balance(tree->left);
+		}
+		if (tree->right)
+		{
+			d = 1 + binary_tree_balance(tree->right);
+		}
+	}
+	return (s - d);
 }
