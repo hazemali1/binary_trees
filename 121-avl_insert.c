@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
 /**
- * bst_insert - insert in bst
+ * avl_insert - insert in bst
  *
  * @tree: Tree
  * @value: Value n
