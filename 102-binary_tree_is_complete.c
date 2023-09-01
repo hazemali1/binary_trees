@@ -17,19 +17,16 @@ int binary_tree_is_complete(const binary_tree_t *tree)
 		{
 			binary_tree_is_complete(tree->left);
 			binary_tree_is_complete(tree->right);
-			printf ("%d  ", tree->n);
-			if (tree && tree->parent && tree->parent->right && (tree == tree->parent->right))
+			if (tree && tree->parent && tree->parent->right &&
+				(tree == tree->parent->right))
 			{
 
 				if (tree->parent->left)
 					return (1);
-				else
-				{
-					printf("haha");
-					return (0);
-				}
+				return (0);
 			}
 		}
 	}
 	return (1);
+
 }
