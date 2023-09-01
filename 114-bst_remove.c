@@ -104,9 +104,9 @@ bst_t *bst_remove(bst_t *root, int value)
 		else
 		{
 			s = rm(root->right);
+			root->n = s;
 			if (s != 0)
 			{
-				root->n = s;
 				bst_remove(root->right, s);
 			}
 		}
